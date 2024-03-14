@@ -6,20 +6,20 @@
 // Dichiariamo chi ha vinto.
 
 
+
 // Chiediamo all'utente se vuole pari o dispari
 const userChoice = prompt('Scegli pari o dispari');
-console.log(userChoice);
-
+console.log('La tua scelta è:', userChoice);
+//Chiediamo all'utente un numero tra 1 e 5 compresi
 const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 compresi'));
-console.log(userNumber);
-
-
-// let randomComputerNumber = getRndInteger (1, 5);
-// console.log(randomComputerNumber);
-
-
-
-
+console.log('Il tuo numero scelto è:', userNumber);
+//Richiamo il numero generato random dal computer
+let randomComputerNumber = getRndInteger (1, 5);
+console.log('Il numero random del computer è:', randomComputerNumber);
+//Sommare il numero dell'utente con quello generato random dal computer
+let sum;
+sum = userNumber + randomComputerNumber;
+console.log('La somma dei due numeri è:', sum);
 
 
 
