@@ -3,20 +3,28 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // Chiedo all'utente un parola
-const userWord = prompt('Ciao! Dimmi una parola qualsiasi');
-console.log(userWord);
-// Dovrò leggermi la parola in stile array
-for (let i = 0; i < userWord.length; i++) { // NON CAPISCO PERCHE MA IN CONSOLE LE LETTERE DOPPIE ME LE ACCORPA DICENDO CHE C'E' UNA RIPETIZIONE
-    let eachUserWordLetter = userWord[i];
-    console.log(eachUserWordLetter);
-}
-
+const userWord = prompt("Ciao! Dimmi una parola qualsiasi");
+// Richiamo la funzione
+let palindrome = isPalindrome(userWord);
+console.log(palindrome);
 
 // FUNCTIONS
 
-// Controlla se la parola che inserisco è palindroma
 // word --> stringa che dovrò controllare se palindroma
-// return: stringa in cui dichiaro se word è palindroma oppure no
-function isPalindrome (word) {
-    // Devo capire se la sequenza delle lettere inserite dall'utente è uguale al suo reverso
+// return: stringa nella quale enuncio se la parola è palindroma
+function isPalindrome(word) {
+  let wordReverse = "";
+  // Leggo la parola a rovescio
+  for (let i = userWord.length - 1; i >= 0; i--) {
+    wordReverse += userWord[i];
+  }
+  let result = "";
+  // Controlla se la parola che inserisco è palindroma
+  if (word === wordReverse) {
+    result = word + " " + wordReverse + " " + "La parola è palindroma";
+  } else {
+    result = word + " " + wordReverse + " " + "La parola non è palindroma";
+  }
+
+  return result;
 }
