@@ -12,7 +12,7 @@ const userChoice = prompt('Scegli pari o dispari');
 console.log('La tua scelta è:', userChoice);
 //Chiediamo all'utente un numero tra 1 e 5 compresi
 const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 compresi'));
-console.log('Il tuo numero scelto è:', userNumber);
+console.log('Il numero da te scelto è:', userNumber);
 //Richiamo il numero generato random dal computer
 let randomComputerNumber = getRndInteger (1, 5);
 console.log('Il numero random del computer è:', randomComputerNumber);
@@ -20,8 +20,17 @@ console.log('Il numero random del computer è:', randomComputerNumber);
 let sum;
 sum = userNumber + randomComputerNumber;
 console.log('La somma dei due numeri è:', sum);
-
-
+// Richiamo la funzione per capire se un numero è pari o dispari
+let sumEvenOrOdd = isEvenOrOdd (sum);
+console.log('La somma è un numero:', sumEvenOrOdd);
+//Dichiariamo chi ha vinto
+let userMessage;
+if (userChoice === sumEvenOrOdd) {
+    userMessage = 'Complimenti hai vinto!';
+} else {
+    userMessage = 'Peccato hai perso!';
+}
+alert(userMessage);
 
 
 // FUNCTIONS
@@ -32,4 +41,19 @@ console.log('La somma dei due numeri è:', sum);
 // return: numero intero compreso tra min e max generato random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+// Stabilire se un numero è pari o dispari
+// num --> numero intero da controllare se pari o dispari
+// return: stringa dove mi dice se num è pari o dispari
+function isEvenOrOdd (num) {
+    let evenOrOdd;
+
+    if (num % 2 === 0) {
+        evenOrOdd = 'pari';
+    } else {
+        evenOrOdd = 'dispari';
+    }
+
+    return evenOrOdd;
 }
