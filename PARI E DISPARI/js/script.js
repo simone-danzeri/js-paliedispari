@@ -6,8 +6,24 @@
 // Dichiariamo chi ha vinto.
 
 
-let randomComputerNumber = getRndInteger (1, 5);
-console.log(randomComputerNumber);
+// Chiediamo all'utente se vuole pari o dispari
+const userChoice = prompt('Scegli pari o dispari');
+console.log(userChoice);
+
+const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 compresi'));
+console.log(userNumber);
+
+
+// let randomComputerNumber = getRndInteger (1, 5);
+// console.log(randomComputerNumber);
+
+
+
+
+
+
+
+
 // FUNCTIONS
 
 // Generare numero intero random tra 1 e 5 per computer
