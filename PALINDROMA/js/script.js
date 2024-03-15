@@ -15,8 +15,8 @@ console.log(palindrome);
 function isPalindrome(word) {
   let wordReverse = "";
   // Leggo la parola a rovescio
-  for (let i = userWord.length - 1; i >= 0; i--) {
-    wordReverse += userWord[i];
+  for (let i = word.length - 1; i >= 0; i--) {
+    wordReverse += word[i];
   }
   let result = "";
   // Controlla se la parola che inserisco è palindroma
